@@ -1,0 +1,53 @@
+{% load static %}
+{% load boost %}
+<!-- ">python3 manage.py collectstatic" をしておくこと -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'mycss/index.css' %}">
+    <title>review-of-programming</title>
+</head>
+
+<body>
+    <h1>武蔵野進学セミナー プログラミング復習</h1>
+    <div class="container">
+        <div class="row row-height">
+    <!-- {% with ''|center:18 as range %} -->
+    {% for i in 1|range:19 %}
+        <!-- <div class="fix-box"> -->
+            <div class="col-4 col-md-2">
+                <div class="btn-other h-100">
+                <a class="btn btn-outline-dark text-center w-100" href="{% url 'chapter' pk=i %}">chapter{{ i }}
+                    {% if i == 1 %} <h4><br> 動きと音</h4>
+                    {% elif i == 2 %} <h4><br>ずっと行動</h4>
+                    {% elif i == 3 %} <h4><br>もし~</h4>
+                    {% elif i == 4 %} <h4><br>リセット</h4>
+                    {% elif i == 5 %} <h4>もし~、<br>でなければ</h4>
+                    {% elif i == 6 %} <h4>すべてを<br>止める</h4>
+                    {% elif i == 7 %} <h4>ツー<br>スレッド</h4>
+                    {% elif i == 8 %} <h4>アングル<br>海岸</h4>
+                    {% elif i == 9 %} <h4><br>アングル港</h4>
+                    {% elif i == 10 %} <h4>マイナス<br>アイランド</h4>
+                    {% elif i == 11 %} <h4>トーゴー<br>遺跡</h4>
+                    {% elif i == 12 %} <h4>フトーゴー<br>地方</h4>
+                    {% elif i == 13 %} <h4>フトーゴー<br>空港</h4>
+                    {% elif i == 14 %} <h4>ザヒョー島<br> ~ピーチ~</h4>
+                    {% elif i == 15 %} <h4>ザヒョー島<br> ~ポルタ~</h4>
+                    {% elif i == 16 %} <h4>ザヒョー島<br> ~ムルギ~</h4>
+                    {% elif i == 17 %} <h4>ザヒョー島<br> ~レック~</h4>
+                    {% elif i == 18 %} <h4>ザヒョー島<br> ~ガーナ~</h4>
+                    {% else %}
+                    {% endif %}
+                </a>
+                </div>
+            </div>
+        <!-- </div> -->
+    {% endfor %}
+    <!-- {% endwith %} -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+body{
+    /* background: linear-gradient(-135deg,#74ebd5, #ACB6E5); */
+    background:#74ebd5;
+    height: 100vh;
+}
+
+h1{
+    color: black;
+    border-bottom: dashed 2px black;
+    margin: 1em;
+}
+
+.btn-other{
+    margin-bottom: 1em;
+}
+
+.fix-box{
+    display: flex;
+    flex-wrap: wrap;
+}
